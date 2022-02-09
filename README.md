@@ -1,86 +1,55 @@
-Tales from the Crypto
+# Tales from the Crypto
 
 ![Stock Sentiment](Images/sentimental.jpeg)
 
 ## Background
 
-There's been a lot of hype in the news lately about cryptocurrency, so you want to take stock, so to speak, of the latest news headlines regarding Bitcoin and Ethereum to get a better feel for the current public sentiment around each coin.
+There's been a lot of hype in the news lately about cryptocurrency, so we want to take stock of the latest news descriptions regarding Bitcoin and Ethereum to get a better feel for the current public sentiment around each coin.
 
-In this assignment, you will apply natural language processing to understand the sentiment in the latest news articles featuring Bitcoin and Ethereum. You will also apply fundamental NLP techniques to better understand the other factors involved with the coin prices such as common words and phrases and organizations and entities mentioned in the articles.
+In this assignment, I have applied natural language processing to understand the sentiment in the latest news articles featuring Bitcoin and Ethereum. I have also applied fundamental NLP techniques to better understand the other factors involved with the coin prices such as common words and phrases and organizations and entities mentioned in the articles.
 
+## Summary
+
+### Sentiment Analysis
+Overall, sentiment towards Bitcoin and Ethereum are mixed. Bitcoin's mean compound score is -0.4 indicating a mixed negative sentiment. Ethereum's mean compound score is 0.1 indicating a slight mixed positive sentiment.
+
+### NGrams and Frequency Analysis
+Bitcoin - Top 10 frequent bigrams
+1. bitcoin, mining, 6
+2. international, monetary, 6
+3. el, salvador, 6
+4. legal, tender, 4
+5. mining, system, 4
+6. jack, dorsey, 4
+7. heather, morgan, 4
+8. six, fears, 4
+9. fears, russian, 4
+10. russian, attack, 4
+
+Ethereum - Top 10 frequent bigrams
+1. nft, marketplace, 6
+2. york, city, 4
+3. sequoia, capital , 4
+4. capital, india, 4
+5. nonfungible, token, 4
+6. million, ethereum, 3
+7. bitcoin, ethereum, 3
+8. vitalik, buterin, 3
+9. ethereum, blockchain, 3
+10. led, sequoia, 3
+
+### Wordclouds
+Wordclouds help present the most common words throughout the texts analyzed. When working through the analysis, it is also a helpful tool for identifying frequent stopwords that are not included in NLTKs stopwords module.
+
+### Bitcoin
+![Bitcoin Word Cloud](Images/btc_wordcloud.png)
+
+### Ethereum
+![Ethereum Word Cloud](Images/eth_wordcloud.png)
 Complete the following tasks:
 
-1. [Sentiment Analysis](#1---Sentiment-Analysis)
-2. [Natural Language Processing](#2---Natural-Language-Processing)
-3. [Named Entity Recognition](#3---Named-Entity-Recognition)
 
----
+### Named Entity Recognition
+![Bitcoin NER](Images/btc_ner.png)
 
-## Files
-
-[Starter Notebook](Starter_Code/crypto_sentiment.ipynb)
-
----
-
-## Instructions
-
-### 1 - Sentiment Analysis
-
-Use the [newsapi](https://newsapi.org/) to pull the latest news articles for Bitcoin and Ethereum and create a DataFrame of sentiment scores for each coin.
-
-Use descriptive statistics to answer the following questions:
-
-> Which coin had the highest mean positive score?
->
-> Which coin had the highest negative score?
->
-> Which coin had the highest positive score?
-
-
-
-### 2 - Natural Language Processing
-
-In this section, you will use NLTK and Python to tokenize text, find n-gram counts, and create word clouds for both coins. 
-
-#### Tokenize
-
-Be sure to:
-
-1. Lowercase each word.
-2. Remove punctuation.
-3. Remove stop words.
-
-#### N-grams
-
-Next, look at the ngrams and word frequency for each coin.
-
-1. Use NLTK to produce the ngrams for N = 2.
-2. List the top 10 words for each coin.
-
-#### Word Clouds
-
-Finally, generate word clouds for each coin to summarize the news for each coin.
-
-![btc-word-cloud.png](Images/btc-word-cloud.png)
-
-![eth-word-cloud.png](Images/eth-word-cloud.png)
-
-
-### 3 - Named Entity Recognition
-
-In this section, you will build a named entity recognition model for both coins and visualize the tags using SpaCy.
-
-![btc-ner.png](Images/btc-ner.png)
-
-![eth-ner.png](Images/eth-ner.png)
-
-
-
-### Resources
-
-[Vader Sentiment Analysis](http://www.nltk.org/howto/sentiment.html)
-
-
-### Hints and Considerations
-
-The free developer version of the News API limits the total daily requests, so be careful not to exceed the free limits.
+![Ethereum NER](Images/eth_ner.png)
