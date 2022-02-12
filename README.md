@@ -8,6 +8,9 @@ There's a lot of hype in the news about cryptocurrency, so we want to take stock
 
 In this assignment, I have applied natural language processing to understand the sentiment in the latest news articles featuring Bitcoin and Ethereum. I have also applied fundamental NLP techniques to better understand the other factors involved with the coin prices such as common words and phrases and organizations and entities mentioned in the articles.
 
+### Project Note:
+This project requires a newsapi key and uses the nltk and spaCy NLP libraries.
+
 # Summary
 
 # Sentiment Analysis
